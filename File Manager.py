@@ -1,11 +1,4 @@
 # Created by : @oAmricao
-# Runtime-fixed version (2026-10-27):
-#   1) delete_item: if send2trash fails on some systems (e.g. "Not a directory:
-#      .Trash-UID" error), it now falls back to direct deletion instead of failing.
-#   2) unzip_selected: protected against malicious "../" paths inside zip files
-#      (zip-slip) using zipfile filter="data" on Python 3.12+, manual check on older.
-# Fixed & hardened version
-
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import os, shutil, datetime, threading, subprocess, sys, string, fnmatch, zipfile, csv, queue
